@@ -1,4 +1,4 @@
-"""General interface script to lunch ssl proir jobs."""
+"""General interface script."""
 import time
 
 import datetime
