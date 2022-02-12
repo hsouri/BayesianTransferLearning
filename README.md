@@ -7,4 +7,6 @@ The Bayesian transfer learning framework modifies the loss surface on downstream
 ### How to use:
 Use `prior_run_jobs.py` both to learn priors from pre-trained checkpoints and also to perform inference on downstream tasks.  For a list of arguments, see `priorBox/options.py`.
 
+The learned priors can be found [here](https://drive.google.com/drive/folders/1FbnUsL_CRWORjlTyX8dtHRzcGFeaE4Iz?usp=sharing). To use it with this code pass the argument '--prior_path' with the path for the prior. 
+
 [![Preview](https://github.com/hsouri/BayesianTransferLearning/blob/main/fig.png)](https://github.com/hsouri/BayesianTransferLearning)
