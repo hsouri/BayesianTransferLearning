@@ -35,16 +35,16 @@ Parameters:
 
               - `normal` - tor normal Gaussian prior
               - `shifted_gaussian` - for a learned prior
-* ```PRIOR_PATH``` - the path for the file to load the learned prior. The file should contains mean, variance and cov_factor fields
+* ```PRIOR_PATH``` - the path for the file to load the learned prior. The file should contains mean, variance, and cov_factor fields
 * ```DATA_DIR```  -  the path which contains the data
-* ```TRAIN_DATASET```  - the dataset for the training
-* ```VAL_DATASET```  - the dataset for the validation
-* ```PYTORCH_PRETRAIN```  - if we would like to load the weights from a visiontorch pretrain model
-* ```PRIOR_SCALE```  - the paramter for re-scaling the prior
-* ```NUM_OF_TRAIN_EXAMPLES```  - the number of train examples that we want to train our model
+* ```TRAIN_DATASET```  - the dataset for training
+* ```VAL_DATASET```  - the dataset for validation
+* ```PYTORCH_PRETRAIN```  - if we would like to load the weights from a torchvision pretrained model
+* ```PRIOR_SCALE```  - the parameter for re-scaling the prior
+* ```NUM_OF_TRAIN_EXAMPLES```  - the number of training samples on which to train our model
 * ```WEIGHTS_PATH```  - the path for loading pre-train weights
-* ```NUMBER_OF_SAMPLES_PRIOR``` - the number of samples for the covariance of the prior
-* ```ENCODER``` - The base network architecture. The options are most of the torchvision models.
+* ```NUMBER_OF_SAMPLES_PRIOR``` - the number of samples for fitting the covariance of the prior
+* ```ENCODER``` - The base network architecture. The options include most of models supported by torchvision.
 
 For the full list of arguments, see `priorBox/options.py`.
 
