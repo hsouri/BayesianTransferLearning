@@ -11,6 +11,16 @@ Our Bayesian transfer learning pipeline uses only easy-to-implement existing too
 This repo contains the code for extracting your prior parameters and applying them to a downstream task using Bayesian inference. The downstream tasks include both image classification and image segmentation.
 
 
+### Dependencies:
+
+- torch >= 1.8.1
+- torchvision >= 0.9.1
+- pytorch-lightning >= 1.4.7
+
+For the complete list of requirements see `requirements.txt`.
+
+
+
 ### Usage:
 Use `prior_run_jobs.py` both to learn priors from pre-trained checkpoints and also to perform inference on downstream tasks. 
 ```bash
