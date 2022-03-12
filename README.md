@@ -22,7 +22,7 @@ For the complete list of requirements see `requirements.txt`.
 
 ### Prepare Datasets:
 
-For your convenience, we have provided the python scripts for downloading and organizing the `Oxford Flowers 102` and `Oxford-IIIT Pet` datasets. The python scripts can be find [here](https://github.com/hsouri/BayesianTransferLearning/tree/main/Prapare%20Data).
+For your convenience, we have provided the python scripts for downloading and organizing the `Oxford Flowers 102` and `Oxford-IIIT Pet` datasets. The python scripts can be found [here](https://github.com/hsouri/BayesianTransferLearning/tree/main/Prapare%20Data).
 
 
 
@@ -46,7 +46,7 @@ python prior_run_jobs.py --job=<JOB> \
 
 Parameters:
 
-* ```JOB``` -  set `prior` to learn a prior or `supervised_Baysian_lerning` to perform inference on downstream tasks. 
+* ```JOB``` -  set `prior` to learn a prior or `supervised_bayesian_learning` to perform inference on downstream tasks. 
 
 * ```PRIOR_TYPE``` --the type of the prior use for inference on a downstream task:
 
