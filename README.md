@@ -20,6 +20,11 @@ This repo contains the code for extracting your prior parameters and applying th
 For the complete list of requirements see `requirements.txt`.
 
 
+### Prepare Datasets:
+
+For your convenience, we have provided the python scripts for downloading and organizing the `Oxford Flowers 102` and `Oxford-IIIT Pet` datasets. The python scripts can be find [here](https://github.com/hsouri/BayesianTransferLearning/tree/main/Prapare%20Data).
+
+
 
 ### Usage:
 Use `prior_run_jobs.py` both to learn priors from pre-trained checkpoints and also to perform inference on downstream tasks. 
