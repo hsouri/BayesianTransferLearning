@@ -48,10 +48,10 @@ Parameters:
 
 * ```JOB``` -  set `prior` to learn a prior or `supervised_Baysian_lerning` to perform inference on downstream tasks. 
 
-* ```PRIOR_TYPE``` --the type of the prior in a inference inference  downstream task:
+* ```PRIOR_TYPE``` --the type of the prior use for inference on a downstream task:
 
-              - `normal` - tor normal Gaussian prior
-              - `shifted_gaussian` - for a learned prior
+              - `normal` - zero-mean isotropic Gaussian prior
+              - `shifted_gaussian` - learned prior
 * ```PRIOR_PATH``` - the path for the file to load the learned prior. The file should contains mean, variance, and cov_factor fields
 * ```DATA_DIR```  -  the path which contains the data
 * ```TRAIN_DATASET```  - the dataset for training
