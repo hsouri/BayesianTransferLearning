@@ -24,6 +24,7 @@ For the complete list of requirements see `requirements.txt`.
 ### Usage:
 Use `prior_run_jobs.py` both to learn priors from pre-trained checkpoints and also to perform inference on downstream tasks. 
 ```bash
+
 python prior_run_jobs.py --job=<JOB> \
                          --prior_type=<PRIOR_TYPE> \
                          --data_dir=<DATA_DIR> \
@@ -41,6 +42,7 @@ python prior_run_jobs.py --job=<JOB> \
 Parameters:
 
 * ```JOB``` -  set `prior` to learn a prior or `supervised_Baysian_lerning` to perform inference on downstream tasks. 
+
 * ```PRIOR_TYPE``` --the type of the prior in a inference inference  downstream task:
 
               - `normal` - tor normal Gaussian prior
@@ -56,7 +58,7 @@ Parameters:
 * ```NUMBER_OF_SAMPLES_PRIOR``` - the number of samples for fitting the covariance of the prior
 * ```ENCODER``` - The base network architecture. The options include most of models supported by torchvision.
 
-For the full list of arguments, see `priorBox/options.py`.
+For the full list of arguments, see `priorBox/options.py`. All optional arguments for Baysian lerning are listed [here](https://github.com/hsouri/BayesianTransferLearning/blob/main/priorBox/Baysian_learning/args.py) and optional argumets for learning a prior are listed [here](https://github.com/hsouri/BayesianTransferLearning/blob/main/priorBox/solo_learn/args/setup.py).
 
 
 ### Our Pre-Trained Priors:
