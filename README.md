@@ -61,7 +61,7 @@ Parameters:
 * ```NUM_OF_TRAIN_EXAMPLES```  - the number of training samples on which to train our model
 * ```WEIGHTS_PATH```  - the path for loading pre-train weights
 * ```NUMBER_OF_SAMPLES_PRIOR``` - the number of samples for fitting the covariance of the prior
-* ```ENCODER``` - The base network architecture. The options include most of models supported by torchvision.
+* ```ENCODER``` - The base network architecture. The options include most models supported by torchvision.
 
 For the full list of arguments, see `priorBox/options.py`. All optional arguments for Bayesian learning are listed [here](https://github.com/hsouri/BayesianTransferLearning/blob/main/priorBox/Baysian_learning/args.py) and optional arguments for learning a prior are listed [here](https://github.com/hsouri/BayesianTransferLearning/blob/main/priorBox/solo_learn/args/setup.py).
 
