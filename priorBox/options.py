@@ -12,15 +12,15 @@ def options():
     parser = argparse.ArgumentParser(description='Construct prior options.')
 
     parser.add_argument('--job', required=True, type=str, 
-                        choices=['prior_SSL', 'supervised_Baysian_lerning'])
+                        choices=['prior_SSL', 'supervised_bayesian_learning'])
 
     known_args, _ = parser.parse_known_args()
 
     if known_args.job == 'prior_SSL':
         # Parse SSL posterior training args
         args = parse_args_pretrain(parser)
-    elif known_args.job == 'supervised_Baysian_lerning':
-        # Parse Baysian learning args
+    elif known_args.job == 'supervised_bayesian_learning':
+        # Parse Bayesian learning args
         args = parse_args_SBL(parser)
     else:
         raise NotImplementedError
