@@ -75,6 +75,6 @@ Our learned priors can be found [here](https://drive.google.com/drive/folders/1F
   title={Pre-Train Your Loss: Easy Bayesian Transfer Learning with Informative Priors},
   author={Shwartz-Ziv, Ravid and Goldblum, Micah and Souri, Hossein and Kapoor, Sanyam and Zhu, Chen and LeCun, Yann and Wilson, Andrew Gordon},
   journal={arXiv preprint arXiv:2205.10279},
-  year={2018}
+  year={2022}
 }
 ```
