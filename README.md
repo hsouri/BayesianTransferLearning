@@ -3,6 +3,16 @@
 This repository contains an easy-to-use PyTorch implementation of methods described in [Pre-Train Your Loss! High-Performance Transfer Learning with Bayesian Neural Networks and Pre-Trained Priors](https://arxiv.org/abs/2205.10279) by [Ravid Shwartz-Ziv](https://www.ravid-shwartz-ziv.com/), [Micah Goldblum](https://goldblum.github.io/), [Hossein Souri](https://hsouri.github.io/), [Sanyam Kapoor](https://sanyamkapoor.com/), [Chen Zhu](https://zhuchen03.github.io/), [Yann Lecun](http://yann.lecun.com/), and [Andrew Gordon Wilson](https://cims.nyu.edu/~andrewgw/).
 [![Preview](/loss_surface.png)](https://arxiv.org/abs/2205.10279)
 
+## Summary 
+
+**Idea:** We can transfer much more than an initialization. Knowledge of the source task should affect the **locations** and **shape** of optima on the downstream task.
+
+**Approach:** Infer a posterior on the source task to re-scale as an **informative prior** on the downstream task.
+
+**Results:** Significantly improved performance over standard transfer learning and fine tuning, with minimal overhead.
+
+## Overview
+
 Our Bayesian transfer learning framework transfers knowledge from pre-training to downstream tasks. To up-weight parameter settings consistent with a pre-training loss function, we fit a probability distribution over the parameters of feature extractors to a pre-training loss function and rescale it as a prior. By adopting a learned prior, we alter the downstream loss surface and its optimal locations. By contrast, typical transfer learning methods only use a pre-trained initialization. 
 
 [![Preview](https://github.com/hsouri/BayesianTransferLearning/blob/main/fig.png)](https://arxiv.org/abs/2205.10279)
