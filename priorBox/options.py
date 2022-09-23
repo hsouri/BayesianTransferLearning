@@ -2,7 +2,7 @@
 
 import argparse
 from .solo_learn.args.setup import parse_args_pretrain
-from .Baysian_learning.args import parse_args_SBL
+from .bayesian_learning.args import parse_args_SBL
 
 
 

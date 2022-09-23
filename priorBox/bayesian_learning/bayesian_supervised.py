@@ -1,17 +1,17 @@
 """The main supervised class for running bayesian deep learning model (including ray tune)"""
 
 import os
-from .Baysian_base import _BaysianBase
+from .bayesian_base import _bayesianBase
 from .train_supervised import training_function
 from .run_tune import run_ray
 from ..solo_learn.utils.classification_dataloader import prepare_data
 
 
 
-class BaysianSupervised(_BaysianBase):
+class bayesianSupervised(_bayesianBase):
 
     def __init__(self, args):
-        super(BaysianSupervised, self).__init__(args)
+        super(bayesianSupervised, self).__init__(args)
 
 
     def learn(self):

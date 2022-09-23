@@ -16,10 +16,10 @@ if __name__ == "__main__":
         prior = priorBox.Prior(args)
         prior.learn_prior()
         train_posterior_time = time.time()
-    elif 'Baysian' in args.job:
-        baysian_learner = priorBox.Baysian_learner(args)
-        baysian_learner.learn()
-        Baysian_leraning_time = time.time()
+    elif 'bayesian' in args.job:
+        bayesian_learner = priorBox.bayesian_learner(args)
+        bayesian_learner.learn()
+        bayesian_leraning_time = time.time()
 
 
     end_time = time.time()

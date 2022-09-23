@@ -1,4 +1,4 @@
-'''Parse Baysian Learning args'''
+'''Parse bayesian Learning args'''
 
 import argparse
 import os

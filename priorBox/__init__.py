@@ -1,8 +1,8 @@
 from .prior import Prior
-from .Baysian_learning import Baysian_learner
+from .bayesian_learning import bayesian_learner
 
 from .options import options
 
 
 
-__all__ = ['Prior', 'Baysian_learner', 'options']
+__all__ = ['Prior', 'bayesian_learner', 'options']
