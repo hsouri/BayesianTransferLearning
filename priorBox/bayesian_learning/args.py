@@ -57,7 +57,7 @@ def parse_args_SBL(parser):
     parser.add_argument('--prior_path', type=str
                         , default=None,
                         # ,default = 'models/r50_1x_sk0.pth',
-                        help='Path for pre-trained model for the prior, models/211212_161751/swag_model1.pt')
+                        help='path should fit this format: prior_path_model.pt, prior_path_mean.pt, prior_path_variance.pt, prior_path_covmat.pt')
     parser.add_argument('--prior_scale', type=float, default=1e10, help='variance for the prior')
     parser.add_argument('--scale_low_rank', type=str2bool, default=True,
                         help='if we scale also the low rank cov matrix')
