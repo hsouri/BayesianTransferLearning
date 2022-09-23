@@ -62,7 +62,7 @@ Parameters:
 
               - `normal` - zero-mean isotropic Gaussian prior
               - `shifted_gaussian` - learned prior
-* ```PRIOR_PATH``` - path for the file to load the learned prior. The file should contain mean, variance, and cov_factor fields
+* ```PRIOR_PATH``` - path for the file to load the learned prior. The file should contain mean, variance, and cov_factor fields. It must to the following format: prior_path_model.pt, prior_path_mean.pt, prior_path_variance.pt, prior_path_covmat.pt. You can download the pretrained priors [here]().
 * ```DATA_DIR```  -  path which contains the data
 * ```TRAIN_DATASET```  - dataset for training
 * ```VAL_DATASET```  - dataset for validation
