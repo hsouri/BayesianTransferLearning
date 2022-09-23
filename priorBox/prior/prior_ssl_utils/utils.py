@@ -107,25 +107,30 @@ def load_weights_simclr(net: torch.nn.Module, path: str, remove_classifier: bool
 
 
 def load_weights(net, load_classifier=False, path: str = None):
-    state = torch.load(path)
-    #if state
-    if isinstance(state, SWAG):
-        state.sample(0.)
-        state = state.base_model.state_dict()
-    if 'state_dict' in state:
-        state = state['state_dict']
-    for k in list(state.keys()):
-        if "base_model.encoder" in k:
-            state[k.replace("base_model.encoder.", "")] = state[k]
-            del state[k]
-    if 'resnet' in state:
-        state = state['resnet']
-    if load_classifier:
-        for k in list(state.keys()):
-            if "module.linear" in k:
-                state[k.replace("module.linear.", "")] = state[k]
-                del state[k]
-        net.backbone.load_state_dict(state, strict=True)
-    else:
-        ss = net.backbone.load_state_dict(state, strict=False)
-        print(ss)
+
+    checkpoint = torch.load(path + '_model.pt', map_location=torch.device('cpu'))
+    net.backbone.load_state_dict(checkpoint)
+
+    # TODO: fix loading from ssl_prior
+    # state = torch.load(path)
+    # #if state
+    # if isinstance(state, SWAG):
+    #     state.sample(0.)
+    #     state = state.base_model.state_dict()
+    # if 'state_dict' in state:
+    #     state = state['state_dict']
+    # for k in list(state.keys()):
+    #     if "base_model.encoder" in k:
+    #         state[k.replace("base_model.encoder.", "")] = state[k]
+    #         del state[k]
+    # if 'resnet' in state:
+    #     state = state['resnet']
+    # if load_classifier:
+    #     for k in list(state.keys()):
+    #         if "module.linear" in k:
+    #             state[k.replace("module.linear.", "")] = state[k]
+    #             del state[k]
+    #     net.backbone.load_state_dict(state, strict=True)
+    # else:
+    #     ss = net.backbone.load_state_dict(state, strict=False)
+    #     print(ss)

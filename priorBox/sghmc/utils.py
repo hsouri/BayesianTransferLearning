@@ -27,18 +27,21 @@ def load_prior(path: str, config: dict, number_of_samples_prior: int = 4) -> Dic
     """Return the networks prior"""
     prior_type = config['prior_type']
     if prior_type == 'shifted_gaussian':
+        # TODO fix to load from ssl_prior
         # load mean, diagonal variance and the low rank covariance
-        state = torch.load(path)
-        state.fit()
-        mean, variance = state._get_mean_and_variance()
+
+        mean = torch.load(path + '_mean.pt')
+        variance = torch.load(path + '_variance.pt')
+        cov_factor = torch.load(path + '_covmat.pt')
+        
         variance = config['prior_scale'] * variance + config['prior_eps']
         if number_of_samples_prior > 0:
             if config['scale_low_rank']:
-                cov_mat_sqrt = config['prior_scale'] * (state['cov_factor'][:number_of_samples_prior])
+                cov_mat_sqrt = config['prior_scale'] * (cov_factor[:number_of_samples_prior])
             else:
-                cov_mat_sqrt = state['cov_factor'][:number_of_samples_prior]
+                cov_mat_sqrt = cov_factor[:number_of_samples_prior]
         else:
-            cov_mat_sqrt = torch.zeros_like(state['cov_factor'][:1])
+            cov_mat_sqrt = torch.zeros_like(cov_factor[:1])
     elif prior_type == 'normal':
         # Normal gaussian prior
         backbone = get_backbone(config)
