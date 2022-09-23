@@ -62,7 +62,7 @@ Parameters:
 
               - `normal` - zero-mean isotropic Gaussian prior
               - `shifted_gaussian` - learned prior
-* ```PRIOR_PATH``` - path for the file to load the learned prior. The file should contain model weight, mean, variance, and cov_factor fields. It must fit to the following format: prior_path_model.pt, prior_path_mean.pt, prior_path_variance.pt, prior_path_covmat.pt. You can download the pretrained priors [here]().
+* ```PRIOR_PATH``` - path for the file to load the learned prior. The file should contain model weight, mean, variance, and cov_factor fields. It must fit to the following format: prior_path_model.pt, prior_path_mean.pt, prior_path_variance.pt, prior_path_covmat.pt. You can download the pretrained priors [here](https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/hsouri1_jh_edu/Et6cosMhV39CqI_k_rqpKMoBSJmJSXKkk_w3dn_VgEfr7w?e=RdNcKn).
 * ```DATA_DIR```  -  path which contains the data
 * ```TRAIN_DATASET```  - dataset for training
 * ```VAL_DATASET```  - dataset for validation
@@ -77,7 +77,7 @@ For the full list of arguments, see `priorBox/options.py`. All optional argument
 
 
 ### Our Pre-Trained Priors:
-Our learned priors can be found [here](https://drive.google.com/drive/folders/1FbnUsL_CRWORjlTyX8dtHRzcGFeaE4Iz?usp=sharing). The priors include torchvision ResNet-50 and ResNet-101 as well as SimCLR ResNet-50, all trained on ImageNet.  To use these for downstream tasks, pass the argument `--prior_path` along with the path for the prior when running `prior_run_jobs.py`. Please note that the path should contain model weight, mean, variance, and cov_factor fields. Also, it must fit to the following format: "prior_path"_model.pt, "prior_path"_mean.pt, "prior_path"_variance.pt, "prior_path"_covmat.pt.
+Our learned priors can be found [here](https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/hsouri1_jh_edu/Et6cosMhV39CqI_k_rqpKMoBSJmJSXKkk_w3dn_VgEfr7w?e=RdNcKn). The priors include torchvision ResNet-50 and ResNet-101 as well as SimCLR ResNet-50, all trained on ImageNet.  To use these for downstream tasks, pass the argument `--prior_path` along with the path for the prior when running `prior_run_jobs.py`. Please note that the path should contain model weight, mean, variance, and cov_factor fields. Also, it must fit to the following format: "prior_path"_model.pt, "prior_path"_mean.pt, "prior_path"_variance.pt, "prior_path"_covmat.pt.
 
 ### How to Cite:
 ```bibtex
